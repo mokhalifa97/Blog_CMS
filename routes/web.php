@@ -32,3 +32,16 @@ Route::get('/service', function () {
 Route::get('/blog', function () {
     return view('website.blog');
 })->name('blog');
+
+Route::get('/admin', function () {
+    return view('dashboard.admin');
+})->name('admin');
+
+Route::get('/charts', function () {
+    return view('dashboard.charts');
+})->name('admin.charts');
+
+
+
+
+
