@@ -27,6 +27,10 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/charts', function () {
         return view('dashboard.charts');
     })->name('admin.charts');
+
+    Route::get('/forms', function () {
+        return view('dashboard.forms');
+    })->name('admin.forms');
 });
 
 Route::get('/login',[AuthController::class,'login'])->name('login');
