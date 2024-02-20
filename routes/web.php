@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\SocialiteController;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,9 +27,18 @@ Route::group(['middleware' => ['auth']], function () {
         return view('dashboard.charts');
     })->name('admin.charts');
 
-    Route::get('/forms', function () {
-        return view('dashboard.forms');
-    })->name('admin.forms');
+    Route::get('/posts', function () {
+        return view('dashboard.posts');
+    })->name('admin.posts');
+
+    Route::get('/users', function () {
+        return view('dashboard.users');
+    })->name('admin.users');
+});
+
+// Define route for 404 page
+Route::fallback(function () {
+    return view('errors.404');
 });
 
 Route::get('/login',[AuthController::class,'login'])->name('login');
@@ -63,6 +71,18 @@ Route::get('/service', function () {
 Route::get('/blog', function () {
     return view('website.blog');
 })->name('blog');
+
+Route::get('/about', function () {
+    return view('website.about');
+})->name('about');
+
+Route::get('/faq', function () {
+    return view('website.faq');
+})->name('faq');
+
+Route::get('/pricing', function () {
+    return view('website.pricing');
+})->name('pricing');
 
 
 

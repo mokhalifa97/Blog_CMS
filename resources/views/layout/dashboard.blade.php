@@ -47,9 +47,9 @@
         <!-- partial:partials/_navbar.html -->
         <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
             <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-                <a class="navbar-brand brand-logo" href="index.html"><img src="{{ 'assets/dashboard/images/logo.svg' }}"
+                <a class="navbar-brand brand-logo" href="{{route('admin')}}"><img src="{{ 'assets/dashboard/images/logo.svg' }}"
                         alt="logo" /></a>
-                <a class="navbar-brand brand-logo-mini" href="index.html"><img
+                <a class="navbar-brand brand-logo-mini" href="{{route('admin')}}"><img
                         src="{{ 'assets/dashboard/images/logo-mini.svg' }}" alt="logo" /></a>
             </div>
             <div class="navbar-menu-wrapper d-flex align-items-stretch">
@@ -241,7 +241,7 @@
                         <i class="mdi mdi-home menu-icon"></i>
                     </a>
                 </li>
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false"
                         aria-controls="ui-basic">
                         <span class="menu-title">Basic UI Elements</span>
@@ -256,16 +256,16 @@
                                     href="pages/ui-features/typography.html">Typography</a></li>
                         </ul>
                     </div>
-                </li>
-                <li class="nav-item">
+                </li> --}}
+                {{-- <li class="nav-item">
                     <a class="nav-link" href="pages/icons/mdi.html">
                         <span class="menu-title">Icons</span>
                         <i class="mdi mdi-contacts menu-icon"></i>
                     </a>
-                </li>
+                </li> --}}
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('admin.forms')}}">
-                        <span class="menu-title">Forms</span>
+                    <a class="nav-link" href="{{route('admin.posts')}}">
+                        <span class="menu-title">Posts</span>
                         <i class="mdi mdi-format-list-bulleted menu-icon"></i>
                     </a>
                 </li>
@@ -276,12 +276,12 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="pages/tables/basic-table.html">
-                        <span class="menu-title">Tables</span>
+                    <a class="nav-link" href="{{route('admin.users')}}">
+                        <span class="menu-title">Users</span>
                         <i class="mdi mdi-table-large menu-icon"></i>
                     </a>
                 </li>
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a class="nav-link" data-bs-toggle="collapse" href="#general-pages" aria-expanded="false"
                         aria-controls="general-pages">
                         <span class="menu-title">Sample Pages</span>
@@ -303,7 +303,7 @@
                             </li>
                         </ul>
                     </div>
-                </li>
+                </li> --}}
                 <li class="nav-item sidebar-actions">
                     <span class="nav-link">
                         <div class="border-bottom">
@@ -315,8 +315,8 @@
                                 <p class="text-secondary">Categories</p>
                             </div>
                             <ul class="gradient-bullet-list mt-4">
-                                <li>Free</li>
-                                <li>Pro</li>
+                                {{-- <li>Free</li>
+                                <li>Pro</li> --}}
                             </ul>
                         </div>
                     </span>
